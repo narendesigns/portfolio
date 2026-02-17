@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NARENDRAN NAIR N | Graphic Designer</title>
 
-<meta name="description" content="Narendran Nair - Professional Graphic Designer specializing in branding and digital design.">
-<meta name="author" content="Narendran Nair">
-
+<meta name="description" content="Narendran Nair - Professional Graphic Designer Portfolio">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -16,10 +14,9 @@
 
 <!-- LOADER -->
 <div id="loader">
-    <h1 class="loader-text">NARENDRAN NAIR N</h1>
+    <h1>NARENDRAN NAIR N</h1>
 </div>
 
-<!-- PARTICLES -->
 <canvas id="particles"></canvas>
 
 <header id="navbar">
@@ -34,85 +31,76 @@
         </ul>
     </nav>
 
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 </header>
 
 <!-- HERO -->
 <section id="home" class="home">
-    <div class="container hero-container">
+    <div class="home-text">
+        <h3>Hello, It's Me</h3>
+        <h1>NARENDRAN NAIR N</h1>
+        <h3>I'm a <span class="gradient-text">Graphic Designer</span></h3>
+        <p>
+           I am a multidisciplinary creative professional specializing in high-impact visual design, cinematic storytelling, and strategic branding development.
+            I transform ideas into immersive visual experiences that elevate brands and empower creators.
+        </p>
+        <a href="#" class="btn">Download CV</a>
+    </div>
 
-        <div class="home-text">
-            <h3>Hello, It's Me</h3>
-            <h1>NARENDRAN NAIR N</h1>
-            <h3>I'm a <span class="gradient-text">Graphic Designer</span></h3>
-
-            <p>
-                I am a multidisciplinary creative professional specializing in high-impact visual design, cinematic storytelling, and strategic branding development. 
-                I transform ideas into immersive visual experiences that elevate brands and empower creators.
-            </p>
-
-            <a href="#" class="btn">Download CV</a>
+    <div class="hexagon-wrapper">
+        <div class="hexagon">
+            <img src="https://i.ibb.co/RGn1g7Xh/my-image.png" alt="Profile">
         </div>
-
-        <div class="hexagon-wrapper">
-            <div class="hexagon">
-                <img src="https://i.ibb.co/RGn1g7Xh/my-image.png" alt="Narendran Nair">
-            </div>
-        </div>
-
     </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-    <div class="container">
-        <h2 class="section-title gradient-text">Services</h2>
-
-        <div class="services">
-            <div class="card">Brand Identity</div>
-            <div class="card">Social Media Design</div>
-            <div class="card">Print & Digital Design</div>
-        </div>
+    <h2 class="section-title gradient-text">Services</h2>
+    <div class="services">
+        <div class="card">Brand Identity</div>
+        <div class="card">Social Media Design</div>
+        <div class="card">Print & Digital Design</div>
     </div>
 </section>
 
 <!-- CREATIVE -->
 <section id="portfolio">
-    <div class="container">
-        <h2 class="section-title gradient-text">Creative Platforms</h2>
-
-        <div class="portfolio-grid">
-            <a href="https://www.behance.net/narendrannairn" target="_blank" rel="noopener" class="social-card">Behance</a>
-            <a href="https://www.linkedin.com/in/narendrannairn/" target="_blank" rel="noopener" class="social-card">LinkedIn</a>
-            <a href="https://in.pinterest.com/eagleeyee1998/" target="_blank" rel="noopener" class="social-card">Pinterest</a>
-            <a href="https://www.flickr.com/photos/195078091@N03/" target="_blank" rel="noopener" class="social-card">Flickr</a>
-            <a href="https://www.tumblr.com/blog/hunterzartstudioz" target="_blank" rel="noopener" class="social-card">Tumblr</a>
-            <a href="https://x.com/frames_by_naren" target="_blank" rel="noopener" class="social-card">X</a>
-            <a href="https://discord.com/users/" target="_blank" rel="noopener" class="social-card">Discord</a>
-        </div>
+    <h2 class="section-title gradient-text">Creative Platforms</h2>
+    <div class="portfolio-grid">
+        <a href="https://www.behance.net/narendrannairn" target="_blank" class="social-card">Behance</a>
+        <a href="https://www.linkedin.com/in/narendrannairn/" target="_blank" class="social-card">LinkedIn</a>
+        <a href="https://in.pinterest.com/eagleeyee1998/" target="_blank" class="social-card">Pinterest</a>
+        <a href="https://www.flickr.com/photos/195078091@N03/" target="_blank" class="social-card">Flickr</a>
+        <a href="https://www.tumblr.com/blog/hunterzartstudioz" target="_blank" class="social-card">Tumblr</a>
+        <a href="https://x.com/frames_by_naren" target="_blank" class="social-card">X</a>
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <div class="container">
-        <h2 class="section-title gradient-text">Contact</h2>
+    <h2 class="section-title gradient-text">Contact</h2>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea rows="5" placeholder="Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </div>
+    <form class="contact-form"
+          action="https://formspree.io/f/xkovbvzg"
+          method="POST">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p id="form-success" class="success-message">
+        ✅ Message sent successfully!
+    </p>
 </section>
 
 <footer>
-    © 2026 NARENDRAN NAIR N | All Rights Reserved
+    © 2026 NARENDRAN NAIR N
 </footer>
 
 <script src="script.js"></script>
 </body>
-    </html>
+</html>
