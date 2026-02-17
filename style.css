@@ -73,7 +73,6 @@ header.scrolled{
     color:#fff;
     position:relative;
     padding:5px 0;
-    transition:0.3s;
 }
 
 .nav-link::after{
@@ -109,16 +108,15 @@ section{
 
 /* ================= HERO ================= */
 .home{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    position:relative;
     min-height:100vh;
     padding:150px 8% 100px 8%;
-    gap:70px;
 }
 
+/* TEXT SIDE */
 .home-text{
-    max-width:600px;
+    max-width:650px;
+    padding-right:380px; /* Prevent text touching DP */
 }
 
 .home-text h1{
@@ -142,9 +140,11 @@ section{
     -webkit-text-fill-color:transparent;
 }
 
-/* Profile Hexagon */
+/* PROFILE TOP RIGHT */
 .hexagon-wrapper{
-    flex-shrink:0;
+    position:absolute;
+    top:140px;
+    right:8%;
 }
 
 .hexagon{
@@ -184,8 +184,8 @@ section{
     background:rgba(255,255,255,0.05);
     padding:30px;
     border-radius:20px;
-    transition:0.3s ease;
     text-align:center;
+    transition:0.3s ease;
 }
 
 .card:hover{
@@ -240,7 +240,7 @@ section{
     box-shadow:0 0 10px #00f5ff;
 }
 
-/* Button */
+/* BUTTON */
 .btn{
     padding:10px 25px;
     border:none;
@@ -274,14 +274,18 @@ footer{
         padding:100px 6%;
     }
 
-    .home{
-        flex-direction:column;
-        text-align:center;
-        gap:50px;
+    .home-text{
+        padding-right:0;
+        max-width:100%;
     }
 
-    .home-text{
-        max-width:100%;
+    .hexagon-wrapper{
+        position:relative;
+        top:auto;
+        right:auto;
+        margin-top:40px;
+        display:flex;
+        justify-content:center;
     }
 
     .hexagon{
@@ -361,4 +365,4 @@ footer{
         width:200px;
         height:230px;
     }
-    }
+}
