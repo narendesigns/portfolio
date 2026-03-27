@@ -1,23 +1,25 @@
+// REGISTER GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 // INTRO ANIMATION
-gsap.from("#logo", {
-  scale: 0,
-  duration: 1,
-  ease: "power3.out"
-});
+window.addEventListener("load", () => {
+  gsap.from("#logo", {
+    scale: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
 
-setTimeout(() => {
   gsap.to("#intro", {
     opacity: 0,
     duration: 1,
+    delay: 1.5,
     onComplete: () => {
       document.getElementById("intro").style.display = "none";
     }
   });
-}, 2000);
+});
 
-// CURSOR
+// CUSTOM CURSOR
 const cursor = document.getElementById("cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -28,16 +30,17 @@ document.addEventListener("mousemove", (e) => {
   });
 });
 
-// SCROLL ANIMATION
+// SCROLL ANIMATION (PROJECTS)
 gsap.utils.toArray(".project-card").forEach((el) => {
   gsap.from(el, {
     scrollTrigger: {
       trigger: el,
-      start: "top 90%"
+      start: "top 85%",
     },
-    y: 50,
+    y: 40,
     opacity: 0,
-    duration: 0.8
+    duration: 0.8,
+    ease: "power2.out"
   });
 });
 
@@ -50,13 +53,16 @@ input.addEventListener("keypress", function(e){
     let val = input.value.toLowerCase();
 
     if(val.includes("project")){
-      text.innerHTML = "Check my projects above 🔥";
+      text.innerHTML = "Scroll above to see my featured works 🔥";
+    }
+    else if(val.includes("design")){
+      text.innerHTML = "I specialize in branding, posters & cinematic design 🎬";
     }
     else if(val.includes("contact")){
-      text.innerHTML = "You can contact me via social media 📩";
+      text.innerHTML = "Reach me via my social profiles 📩";
     }
     else{
-      text.innerHTML = "I design cinematic experiences 😎";
+      text.innerHTML = "Ask me about my work, skills or projects 😎";
     }
 
     input.value = "";
