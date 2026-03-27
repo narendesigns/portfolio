@@ -67,11 +67,20 @@ body {
   border: 3px solid red;
   box-shadow: 0 0 25px red;
   margin-bottom: 20px;
+  object-fit: cover;
+}
+
+.hero span {
+  color: red;
 }
 
 /* PROJECTS */
 .projects {
   padding: 60px 5%;
+}
+
+.projects h2 {
+  margin-bottom: 20px;
 }
 
 .project-row {
@@ -103,8 +112,8 @@ body {
   position: absolute;
   bottom: 0;
   padding: 10px;
-  background: linear-gradient(transparent, black);
   width: 100%;
+  background: linear-gradient(transparent, black);
 }
 
 .project-card:hover {
