@@ -1,190 +1,137 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: black;
-  color: white;
-  overflow-x: hidden;
-}
+body { background:black; color:white; overflow-x:hidden; }
 
 /* CURSOR */
 .cursor {
-  width: 12px;
-  height: 12px;
-  background: red;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
+  width:12px; height:12px;
+  background:white;
+  border-radius:50%;
+  position:fixed;
+  pointer-events:none;
+  z-index:9999;
 }
 
 /* INTRO */
 .intro {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3000;
-}
-
-.intro h1 {
-  color: red;
-  font-size: 3rem;
-  letter-spacing: 6px;
+  position:fixed;
+  width:100%; height:100%;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:3000;
 }
 
 /* HERO */
-.hero {
-  position: relative;
-  height: 100vh;
-}
+.hero { position:relative; height:100vh; }
 
 .hero video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position:absolute;
+  width:100%; height:100%;
+  object-fit:cover;
 }
 
-/* DARK OVERLAY */
 .hero::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  top: 0;
-  left: 0;
+  content:"";
+  position:absolute;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.6);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 20px;
+  position:relative;
+  z-index:2;
+  text-align:center;
+  top:50%;
+  transform:translateY(-50%);
 }
 
 .dp {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 3px solid red;
-  box-shadow: 0 0 25px red;
-  margin-bottom: 20px;
-  object-fit: cover;
-  transition: 0.4s;
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  border:3px solid red;
+  box-shadow:0 0 25px red;
+  margin-bottom:20px;
 }
 
-.dp:hover {
-  transform: scale(1.1);
-}
-
-.hero span {
-  color: red;
-}
-
-.hero-content p {
-  max-width: 600px;
-  margin: 10px auto;
-  line-height: 1.6;
-  opacity: 0.9;
-}
+.hero span { color:red; }
 
 /* PROJECTS */
-.projects {
-  padding: 60px 5%;
-}
-
-.projects h2 {
-  margin-bottom: 20px;
-}
+.projects { padding:60px 5%; }
 
 .project-row {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
 }
 
-.project-row::-webkit-scrollbar {
-  height: 6px;
-}
-
-.project-row::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 10px;
-}
-
-/* PROJECT CARD */
 .project-card {
-  min-width: 260px;
-  height: 160px;
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  transition: 0.4s ease;
-  cursor: pointer;
+  min-width:260px;
+  height:160px;
+  border-radius:10px;
+  overflow:hidden;
+  position:relative;
+  transition:0.4s;
 }
 
 .project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
-/* OVERLAY TEXT */
 .project-info {
-  position: absolute;
-  bottom: 0;
-  padding: 10px;
-  width: 100%;
-  background: linear-gradient(transparent, black);
+  position:absolute;
+  bottom:0;
+  padding:10px;
+  width:100%;
+  background:linear-gradient(transparent,black);
 }
 
-/* HOVER EFFECT */
 .project-card:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 25px red;
+  transform:scale(1.08);
+  box-shadow:0 0 20px red;
+}
+
+/* CREATIVE */
+.portfolio-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:20px;
+  padding:40px 5%;
+}
+
+.social-card {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  height:80px;
+  background:#111;
+  border-radius:10px;
+  text-decoration:none;
+  color:white;
+}
+
+.social-card:hover {
+  background:red;
 }
 
 /* CHAT */
 .chat {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #111;
-  padding: 12px;
-  border-radius: 10px;
-  width: 260px;
-  box-shadow: 0 0 10px #000;
-}
-
-.chat input {
-  width: 100%;
-  padding: 6px;
-  margin-top: 10px;
-  background: black;
-  color: white;
-  border: 1px solid red;
-  border-radius: 5px;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#111;
+  padding:12px;
+  border-radius:10px;
+  width:250px;
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.6;
+  text-align:center;
+  padding:20px;
 }
