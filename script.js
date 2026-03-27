@@ -1,18 +1,5 @@
-gsap.registerPlugin(ScrollTrigger);
 
-// INTRO
-window.addEventListener("load", () => {
-  gsap.to("#intro", {
-    opacity: 0,
-    duration: 1,
-    delay: 1,
-    onComplete: () => {
-      document.getElementById("intro").style.display = "none";
-    }
-  });
-});
-
-// CURSOR
+/* CUSTOM CURSOR */
 const cursor = document.getElementById("cursor");
 
 document.addEventListener("mousemove", (e) => {
@@ -20,23 +7,25 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.top = e.clientY + "px";
 });
 
-// SCROLL ANIMATION
-gsap.utils.toArray(".project-card").forEach((el) => {
-  gsap.from(el, {
-    scrollTrigger: el,
-    y: 40,
-    opacity: 0,
-    duration: 0.8
-  });
+/* INTRO LOADER */
+window.addEventListener("load", () => {
+  const intro = document.getElementById("intro");
+
+  setTimeout(() => {
+    intro.style.opacity = "0";
+    intro.style.pointerEvents = "none";
+  }, 1200);
 });
 
-// CHAT
-const input = document.getElementById("chatInput");
-const text = document.getElementById("chatText");
+/* OPTIONAL: HOVER CURSOR EFFECT */
+const cards = document.querySelectorAll(".project-card");
 
-input.addEventListener("keypress", function(e){
-  if(e.key === "Enter"){
-    text.innerHTML = "Explore my projects above 🔥";
-    input.value = "";
-  }
+cards.forEach(card => {
+  card.addEventListener("mouseenter", () => {
+    cursor.style.transform = "scale(2)";
+  });
+
+  card.addEventListener("mouseleave", () => {
+    cursor.style.transform = "scale(1)";
+  });
 });
